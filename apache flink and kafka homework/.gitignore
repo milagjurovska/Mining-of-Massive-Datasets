@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+venv*/
+.venv/
+venv310/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Byte-compiled / caches
+*.pyc
+*.pkl
+
+# Distribution / build
+build/
+dist/
+*.egg-info/
+
+# Notebook checkpoints
+.ipynb_checkpoints
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temp
+*.log
+*.tmp
+*.swp
+
+# Docker / env files
+.env
+docker-compose.override.yml
+
+# Flink / Kafka binaries and archives
+flink-*/
+flink-*-bin-*
+*.zip
+*.tar.gz
+*.tgz
+
+# Jars and other binary libs (if you don't want them in git)
+jars/
+*.jar
+*.war
+
+# Large data / media
+*.mp4
+*.iso
+
+# Misc
+*.db
+*.sqlite

@@ -40,22 +40,6 @@ pip3 install pyspark==3.5.0 kafka-python-ng pandas scikit-learn
    python3 online_streaming/consume_results.py
    ```
 
-## Architecture
-```mermaid
-graph TD
-    A[Dataset] --> B(split_data.py)
-    B --> C[offline.csv]
-    B --> D[online.csv]
-    C --> E(train_models.py)
-    E --> F[Spark Native Model]
-    D --> G(producer.py)
-    G --> H[Kafka Topic: health_data]
-    H --> I(streaming_app.py)
-    F --> I
-    I --> J[Kafka Topic: health_data_predicted]
-    J --> K(consume_results.py)
-```
-
 
 ## Offline Phase: Training Output
 This output confirms that the model was trained successfully and saved in the native Spark format.
@@ -92,5 +76,6 @@ Prediction: Healthy | Data: {'HighBP': 0.0, 'HighChol': 0.0, 'CholCheck': 1.0, '
 ```
 
 Each prediction shows whether the model predicts "Diabetes Risk" or "Healthy" based on health indicators like blood pressure, cholesterol, BMI, age, and lifestyle factors.
+
 
 
